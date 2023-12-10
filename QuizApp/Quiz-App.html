@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Score Generator</title>
+</head>
+<body>
+    <h1>Quiz Score Generator</h1>
+
+    <div id="quiz">
+        <h3>Question 1: What is the capital of France?</h3>
+        <input type="radio" name="q1" value="Paris"> Paris<br>
+        <input type="radio" name="q1" value="Madrid"> Madrid<br>
+        <input type="radio" name="q1" value="Berlin"> Berlin<br>
+
+        <h3>Question 2: What is the largest planet in our solar system?</h3>
+        <input type="radio" name="q2" value="Earth"> Earth<br>
+        <input type="radio" name="q2" value="Jupiter"> Jupiter<br>
+        <input type="radio" name="q2" value="Mars"> Mars<br>
+
+        <button onclick="calculateScore()">Submit</button>
+    </div>
+
+    <p>Your score is: <span id="score">0</span></p>
+
+    <script>
+        function calculateScore() {
+            let score = 0;
+
+            // Check answers for question 1
+            const answer1 = document.querySelector('input[name="q1"]:checked').value;
+            if (answer1 === "Paris") {
+                score += 1;
+            }
+
+            // Check answers for question 2
+            const answer2 = document.querySelector('input[name="q2"]:checked').value;
+            if (answer2 === "Jupiter") {
+                score += 1;
+            }
+
+            // Display the score
+            document.getElementById('score').textContent = score;
+        }
+    </script>
+</body>
+</html>

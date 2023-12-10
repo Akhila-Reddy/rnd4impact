@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Quiz Score Generator&lt;/title&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Quiz Score Generator&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Question 1: What is the capital of France?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q1" value="Paris"&gt; Paris&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q1" value="Madrid"&gt; Madrid&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q1" value="Berlin"&gt; Berlin&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Question 2: What is the largest planet in our solar system?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q2" value="Earth"&gt; Earth&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q2" value="Jupiter"&gt; Jupiter&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="radio" name="q2" value="Mars"&gt; Mars&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="calculateScore()"&gt;Submit&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Your score is: &lt;span id="score"&gt;0&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calculateScore() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let score = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check answers for question 1</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const answer1 = document.querySelector('input[name="q1"]:checked').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (answer1 === "Paris") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>score += 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check answers for question 2</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const answer2 = document.querySelector('input[name="q2"]:checked').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (answer2 === "Jupiter") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>score += 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Display the score</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('score').textContent = score;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

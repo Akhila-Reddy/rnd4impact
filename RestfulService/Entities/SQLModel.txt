@@ -1,0 +1,68 @@
+﻿DB Schema
+
+CREATE TABLE books (
+  id INT IDENTITY PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  year_published INT NOT NULL
+);
+
+CREATE TABLE authors (
+  id INT IDENTITY PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE borrowers (
+  id INT IDENTITY PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL
+);
+
+API Endpoints
+The following are the API endpoints for the library management system:
+
+GET /books - Get a list of all books.
+GET /books/{id} - Get a specific book by its ID.
+POST /books - Create a new book.
+PUT /books/{id} - Update a specific book.
+DELETE /books/{id} - Delete a specific book.
+GET /authors - Get a list of all authors.
+GET /authors/{id} - Get a specific author by its ID.
+POST /authors - Create a new author.
+PUT /authors/{id} - Update a specific author.
+DELETE /authors/{id} - Delete a specific author.
+GET /borrowers - Get a list of all borrowers.
+GET /borrowers/{id} - Get a specific borrower by its ID.
+POST /borrowers - Create a new borrower.
+PUT /borrowers/{id} - Update a specific borrower.
+DELETE /borrowers/{id} - Delete a specific borrower.
+
+AWS Setup
+
+Prereq - AWS Account, AWS IAM, Dynamo DB, AWS CLI, S3 bucket with all permissions for Dynamo,appsettings changes
+
+IAM - https://us-east-1.console.aws.amazon.com/iamv2
+User Name - test-library-mgmt-system
+Permissions - AmazonDynamoDBFullAccess
+Key ID - Get from Console, will vary for different apps
+Access Key - Get from AWS console
+
+
+DynamoDB
+https://us-east-2.console.aws.amazon.com/dynamodbv2
+Tables - books
+
+S3
+https://s3.console.aws.amazon.com/s3/buckets?region=us-east-2
+Name - test-library-mgmt
+
+AWS CLI
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+Create user profile - aws configure --profile "test-s3"
+
+References
+https://codewithmukesh.com/blog/crud-with-dynamodb-in-aspnet-core/
+https://codewithmukesh.com/blog/working-with-aws-s3-using-aspnet-core/#Creating_your_First_AWS_S3_Bucket_via_AWS_Console
+
+
+AKIARSLQTLRPCVB6QLA3
